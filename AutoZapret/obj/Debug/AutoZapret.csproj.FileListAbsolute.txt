@@ -1,0 +1,15 @@
+D:\AutoZapert\AutoZapret\bin\Debug\AutoZapert.exe.config
+D:\AutoZapert\AutoZapret\bin\Debug\AutoZapert.exe
+D:\AutoZapert\AutoZapret\bin\Debug\AutoZapert.pdb
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapret.csproj.AssemblyReference.cache
+D:\AutoZapert\AutoZapret\obj\Debug\MainWindow.baml
+D:\AutoZapert\AutoZapret\obj\Debug\App.baml
+D:\AutoZapert\AutoZapret\obj\Debug\MainWindow.g.cs
+D:\AutoZapert\AutoZapret\obj\Debug\App.g.cs
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapert_MarkupCompile.cache
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapert.g.resources
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapert.Properties.Resources.resources
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapret.csproj.GenerateResource.cache
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapret.csproj.CoreCompileInputs.cache
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapert.exe
+D:\AutoZapert\AutoZapret\obj\Debug\AutoZapert.pdb

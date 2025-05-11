@@ -1,0 +1,12 @@
+﻿<Window x:Class="AutoZapert.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AutoZapert"
+        Visibility="Hidden"
+        ShowInTaskbar="False"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Width="294" Height="233" >
+    <TextBlock x:Name="TextBox1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Center" Height="233" Width="284"/>
+
+</Window>
