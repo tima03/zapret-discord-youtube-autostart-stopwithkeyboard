@@ -18,22 +18,30 @@ namespace AutoZapert
 
         public MainWindow()
         {
-            InitializeComponent();
+            try {
+                InitializeComponent();
 
-            if (!IsAdministrator())
-            {
-                RelaunchAsAdmin();
-                Application.Current.Shutdown();
+                if (!IsAdministrator())
+                {
+                    StopWinws();
+                    RelaunchAsAdmin();
+                    Application.Current.Shutdown();
+                    return;
+                }
+
+                SetupTrayIcon();
+                HookHotkey();
+
+                // Скрываем окно, если не нужно показывать
+                this.Hide();
                 SystemEvents.SessionEnding += OnSessionEnding;
-                return;
             }
-
-            SetupTrayIcon();
-            HookHotkey();
-
-            // Скрываем окно, если не нужно показывать
-            this.Hide();
-            SystemEvents.SessionEnding += OnSessionEnding;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка в конструкторе MainWindow:\n" + ex.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                throw;
+            }
+            
         }
 
         private void OnSessionEnding(object sender, SessionEndingEventArgs e)
@@ -167,7 +175,7 @@ namespace AutoZapert
             }
         }
 
-        private void StopWinws()
+        public void StopWinws()
         {
             try
             {

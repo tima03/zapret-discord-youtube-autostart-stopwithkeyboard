@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\AutoZapert\\AutoZapret\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|d:\\autozapert\\autozapret\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|D:\\AutoZapert\\AutoZapret\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|D:\\AutoZapert\\AutoZapret\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|d:\\autozapert\\autozapret\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DCC4B20A-1100-44DF-AE4D-620B07F1FD85}|AutoZapret.csproj|D:\\AutoZapert\\AutoZapret\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -37,40 +37,43 @@
               "ToolTip": "D:\\AutoZapert\\AutoZapret\\App.xaml",
               "RelativeToolTip": "App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T20:23:45.929Z"
+              "WhenOpened": "2025-05-11T20:23:45.929Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\AutoZapert\\AutoZapret\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "D:\\AutoZapert\\AutoZapret\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-11T20:29:43.845Z"
+              "WhenOpened": "2025-05-11T20:29:43.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "D:\\AutoZapert\\AutoZapret\\App.xaml.cs",
               "RelativeDocumentMoniker": "App.xaml.cs",
               "ToolTip": "D:\\AutoZapert\\AutoZapret\\App.xaml.cs",
               "RelativeToolTip": "App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAmwCkAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T20:23:49.524Z"
+              "WhenOpened": "2025-05-11T20:23:49.524Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\AutoZapert\\AutoZapret\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\AutoZapert\\AutoZapret\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAIwC0AAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAmwLAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-11T20:23:42.909Z",
               "EditorCaption": ""
