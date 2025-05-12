@@ -4,6 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Windows;
 using System.Windows.Input;
+using Microsoft.Win32;
 using Drawing = System.Drawing;
 using Forms = System.Windows.Forms;
 
@@ -23,6 +24,7 @@ namespace AutoZapert
             {
                 RelaunchAsAdmin();
                 Application.Current.Shutdown();
+                SystemEvents.SessionEnding += OnSessionEnding;
                 return;
             }
 
@@ -31,6 +33,24 @@ namespace AutoZapert
 
             // Скрываем окно, если не нужно показывать
             this.Hide();
+            SystemEvents.SessionEnding += OnSessionEnding;
+        }
+
+        private void OnSessionEnding(object sender, SessionEndingEventArgs e)
+        {
+            // Здесь можно остановить winwsProcess и сохранить данные
+            if (winwsProcess != null && !winwsProcess.HasExited)
+            {
+                try
+                {
+                    StopWinws(); // или winwsProcess.CloseMainWindow();
+                    System.IO.File.AppendAllText("shutdown.log", $"Процесс завершен при выходе из Windows: {DateTime.Now}\n");
+                }
+                catch (Exception ex)
+                {
+                    System.IO.File.AppendAllText("shutdown.log", $"Ошибка завершения процесса: {DateTime.Now} {ex.Message}\n");
+                }
+            }
         }
 
         private void HookHotkey()
@@ -81,7 +101,7 @@ namespace AutoZapert
 
             // ✅ Обновляем TextBox на форме
             TextBox1.Text = baseDir;
-            TextBox1.Text += "\n"+binDir;
+            TextBox1.Text += "\n" + binDir;
             TextBox1.Text += "\n" + listDir;
             TextBox1.Text += "\n" + exePath;
             TextBox1.Text += "\n" + listGeneral;
@@ -131,6 +151,21 @@ namespace AutoZapert
                 Forms.MessageBox.Show($"Ошибка запуска winws.exe: {ex.Message}");
             }
         }
+        private void RunCmd(string command)
+        {
+            ProcessStartInfo psi = new ProcessStartInfo("cmd.exe", "/c " + command)
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true
+            };
+
+            using (Process process = Process.Start(psi))
+            {
+                process.WaitForExit();
+            }
+        }
 
         private void StopWinws()
         {
@@ -142,6 +177,12 @@ namespace AutoZapert
                     winwsProcess = null;
                 }
 
+                // Останавливаем WinDivert
+                RunCmd("net stop WinDivert");
+                RunCmd("sc delete WinDivert");
+                RunCmd("net stop WinDivert14");
+                RunCmd("sc delete WinDivert14");
+
                 isRunning = false;
             }
             catch (Exception ex)
@@ -149,6 +190,7 @@ namespace AutoZapert
                 Forms.MessageBox.Show($"Ошибка остановки winws.exe: {ex.Message}");
             }
         }
+
 
         private void SetupTrayIcon()
         {
