@@ -10,21 +10,6 @@
 #define MyAppAssocExt ".myp"
 #define MyAppAssocKey StringChange(MyAppAssocName, " ", "") + MyAppAssocExt
 #define MyIconName "icon.ico"
-
-[CustomMessages]
-russian.CreateDesktopIcon=Создать ярлык на рабочем столе
-english.CreateDesktopIcon=Create a desktop icon
-
-russian.AutostartAll=Автозапуск при входе для всех пользователей
-english.AutostartAll=Autostart on windows entering for ALL USERS
-
-russian.AutostartUser=Автозапуск при входе для текущего пользователя
-english.AutostartUser=Autostart on windows entering for 1 User
-
-russian.AutostartOff=Автозапуск выключен
-english.AutostartOff=Autostart is off
-
-
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application. Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
@@ -53,10 +38,9 @@ Name: "russian"; MessagesFile: "compiler:Languages\Russian.isl"
 
 [Tasks]
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
-Name: "commonstartup"; Description: "{cm:AutostartAll}"; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags: exclusive
-Name: "userstartup"; Description: "{cm:AutostartUser}"; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags: exclusive
-Name: "nostartup"; Description: "{cm:AutostartOff}"; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags: exclusive
-
+Name: "commonstartup" ; Description: "Добавить в автозагрузку для всех пользователей" ; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags:exclusive;
+Name: "userstartup" ; Description: "Добавить в автозагрузку для текущего пользователя" ; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags:exclusive;
+Name: "nostartup" ; Description: "Отключить автозагрузку" ; GroupDescription: "Windows Startup"; MinVersion: 4,4; Flags:exclusive;
 [Files]
 Source: "D:\AutoZapert\AutoZapret\bin\Debug\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "D:\AutoZapert\AutoZapret\bin\Debug\AutoZapert.exe.config"; DestDir: "{app}"; Flags: ignoreversion
